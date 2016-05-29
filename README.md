@@ -1,5 +1,7 @@
 # DGSlimeView
 
+![Platforms](https://cocoapod-badges.herokuapp.com/p/MZTimerLabel/badge.png)
+
 ![img](/source/progress.gif)
 
 模仿QQ消息提示的小红点动画，自己尝试的做了一下。之前参考过Kitten-yang的教程。
