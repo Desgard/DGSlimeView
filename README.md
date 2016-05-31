@@ -8,6 +8,8 @@
 
 模仿QQ消息提示的小红点动画，自己尝试的做了一下。之前参考过Kitten-yang的教程。
 
+## 藕断丝连主要思路
+
 下面是贝塞尔曲线绘制的核心方法。这张图也是DGSlimeView主要数学思路。
 
 ![img](/source/source1.png)
@@ -48,4 +50,57 @@
 }
 ```
 
+## 粒子爆照主要思路
 
+先对View进行例子分割，将各个粒子在view的layer上进行绘制，用数组保存每个粒子的layer。
+
+```Objective-C
+#pragma mark - 进入动画
+- (void) boom: (CGPoint) point {
+    self.backgroundColor = self.superview.backgroundColor;
+    self.origin = point;
+    for (int i = 0; i < 8; ++ i) {
+        for (int j = 0; j < 8; ++ j) {
+            CGFloat pw = MIN(self.frame.size.width, self.frame.size.height) / 8.f;
+            CALayer *shape = [[CALayer alloc] init];
+            shape.backgroundColor = DGThemeColor.CGColor;
+            shape.cornerRadius = pw / 2;
+            shape.frame = CGRectMake(i * pw, j * pw, pw, pw);
+            [self.layer.superlayer addSublayer: shape];
+            [self.boomCells addObject: shape];
+        }
+    }
+    [self cellAnimation];
+}
+```
+
+然后再绘制贝塞尔曲线，实现各个粒子下落状态。由于是模拟爆炸效果，所以缓动函数选用`kCAMediaTimingFunctionEaseOut`。
+
+```Objective-C
+#pragma mark - 粒子动画
+- (void) cellAnimation {
+    for (CALayer *shape in self.boomCells) {
+        CAKeyframeAnimation *ani = [CAKeyframeAnimation animationWithKeyPath: @"position"];
+        ani.path = [self makeRandomPath: shape].CGPath;
+        ani.fillMode = kCAFillModeForwards;
+        ani.timingFunction = [CAMediaTimingFunction functionWithName: kCAMediaTimingFunctionEaseOut];
+        ani.duration = 3;
+        ani.removedOnCompletion = NO;
+        [shape addAnimation: ani forKey: @"moveAnimation"];
+    }
+}
+
+#pragma mark - 随机曲线路径
+- (UIBezierPath *) makeRandomPath: (CALayer *) alayer {
+    UIBezierPath *path = [UIBezierPath bezierPath];
+    CGFloat delta = self.frame.size.width / 2;
+    CGPoint po = CGPointMake(self.origin.x + alayer.position.x - delta, self.origin.y + alayer.position.y - delta);
+    [path moveToPoint: po];
+    
+    CGPoint pod = CGPointMake(self.superview.center.x, self.superview.frame.size.height * 4);
+    long widL = [UIScreen mainScreen].bounds.size.width;
+    long heiL = [UIScreen mainScreen].bounds.size.height;
+    [path addQuadCurveToPoint: pod controlPoint:CGPointMake((random() % widL), random() % heiL)];
+    return path;
+}
+```
