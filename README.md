@@ -4,7 +4,7 @@
 
 这个动画的实现思路可以看我的博文[QQ Message Bubble's Coppy - DGSlimeView](http://desgard.com/2016/05/28/DGSlimeView/)
 
-<img src="/dgytdhy/DGSlimeView/raw/master/source/progress.gif" alt="img" width="300px">
+<img src="/source/progress.gif" alt="img" width="300px">
 
 模仿QQ消息提示的小红点动画，自己尝试的做了一下。之前参考过Kitten-yang的教程。
 
