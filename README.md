@@ -2,7 +2,7 @@
 
 ![Platforms](https://cocoapod-badges.herokuapp.com/p/MZTimerLabel/badge.png)
 
-这个动画的实现思路可以看我的博文[QQ Message Bubble's Coppy - DGSlimeView](http://desgard.com/2016/05/28/DGSlimeView/)
+1. 拖拽时的藕断丝连动画的实现思路可以看我的博文[QQ Message Bubble's Coppy - DGSlimeView](http://desgard.com/2016/05/28/DGSlimeView/)
 
 <img src="/source/progress.gif" alt="img" width="300px">
 
