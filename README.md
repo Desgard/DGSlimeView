@@ -3,6 +3,7 @@
 ![Platforms](https://cocoapod-badges.herokuapp.com/p/MZTimerLabel/badge.png)
 
 1. 拖拽时的藕断丝连动画的实现思路可以看我的博文[QQ Message Bubble's Coppy - DGSlimeView](http://desgard.com/2016/05/28/DGSlimeView/)
+2. 爆炸效果的博文马上上线！！！O(∩_∩)O
 
 <img src="/source/progress.gif" alt="img" width="300px">
 
