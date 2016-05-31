@@ -34,11 +34,15 @@
         [self addSubview: self.trailDot];
         [self addSubview: self.headDot];    // 注意加入顺序
         
+        // TODO: TEST使用
+        
+        
         UIPanGestureRecognizer *panGestrue = [[UIPanGestureRecognizer alloc] initWithTarget: self
                                                                                      action: @selector(panHeadDot:)];
         [self.headDot addGestureRecognizer: panGestrue];
         
     }
+    // self.backgroundColor = [UIColor blackColor];
     return self;
 }
 
@@ -104,16 +108,17 @@
 
 #pragma mark - 还原到原位置
 - (void)placeHeadDot {
-    [UIView animateWithDuration: 0.5f
+    [UIView animateWithDuration: 0.25f
                           delay: 0
          usingSpringWithDamping: 0.5
           initialSpringVelocity: 0
                         options: UIViewAnimationOptionBeginFromCurrentState
                      animations: ^{
                          self.headDot.center = self.center;
+                         self.headDot.backgroundColor = DGThemeColor;
                      }
                      completion: ^(BOOL finished) {
-        
+                         
     }];
 }
 
@@ -145,6 +150,7 @@
         case UIGestureRecognizerStateEnded: {
             CGFloat distance = [self getDistanceBetweenDots];
             if (distance >= self.maxDistance) {
+                [self.headDot boom:self.headDot.center];
                 [self placeHeadDot];
             }
             break;
@@ -174,7 +180,7 @@
     if (!_shapLayer) {
         _shapLayer = [CAShapeLayer layer];
         _shapLayer.fillColor = DGThemeColor.CGColor;
-        _shapLayer.anchorPoint = CGPointMake(0, 0);
+        // _shapLayer.anchorPoint = CGPointMake(0, 0);
         _shapLayer.position = CGPointMake(0, 0);
     }
     return _shapLayer;

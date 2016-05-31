@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D57818D91CFC3107002E5F24 /* UIView+DGSlimeBoom.m in Sources */ = {isa = PBXBuildFile; fileRef = D57818D81CFC3107002E5F24 /* UIView+DGSlimeBoom.m */; };
+		D57818DC1CFC3624002E5F24 /* UIImage+DGSlimeBoom.m in Sources */ = {isa = PBXBuildFile; fileRef = D57818DB1CFC3624002E5F24 /* UIImage+DGSlimeBoom.m */; };
 		D5B31A481CFACA3000E2F5E7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B31A471CFACA3000E2F5E7 /* main.m */; };
 		D5B31A4B1CFACA3000E2F5E7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B31A4A1CFACA3000E2F5E7 /* AppDelegate.m */; };
 		D5B31A4E1CFACA3000E2F5E7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D5B31A4D1CFACA3000E2F5E7 /* ViewController.m */; };
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D57818D71CFC3107002E5F24 /* UIView+DGSlimeBoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+DGSlimeBoom.h"; sourceTree = "<group>"; };
+		D57818D81CFC3107002E5F24 /* UIView+DGSlimeBoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+DGSlimeBoom.m"; sourceTree = "<group>"; };
+		D57818DA1CFC3624002E5F24 /* UIImage+DGSlimeBoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+DGSlimeBoom.h"; sourceTree = "<group>"; };
+		D57818DB1CFC3624002E5F24 /* UIImage+DGSlimeBoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+DGSlimeBoom.m"; sourceTree = "<group>"; };
 		D5B31A431CFACA3000E2F5E7 /* DGSlimeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DGSlimeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5B31A471CFACA3000E2F5E7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D5B31A491CFACA3000E2F5E7 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -133,6 +139,10 @@
 				D5B31A5F1CFACA8100E2F5E7 /* DGSlimeView.m */,
 				D5B31A611CFACEA000E2F5E7 /* DGSlimeDotView.h */,
 				D5B31A621CFACEA000E2F5E7 /* DGSlimeDotView.m */,
+				D57818D71CFC3107002E5F24 /* UIView+DGSlimeBoom.h */,
+				D57818D81CFC3107002E5F24 /* UIView+DGSlimeBoom.m */,
+				D57818DA1CFC3624002E5F24 /* UIImage+DGSlimeBoom.h */,
+				D57818DB1CFC3624002E5F24 /* UIImage+DGSlimeBoom.m */,
 			);
 			name = DGSlimeView;
 			sourceTree = "<group>";
@@ -282,6 +292,8 @@
 				D5B31A4E1CFACA3000E2F5E7 /* ViewController.m in Sources */,
 				D5B31A4B1CFACA3000E2F5E7 /* AppDelegate.m in Sources */,
 				D5B31A631CFACEA000E2F5E7 /* DGSlimeDotView.m in Sources */,
+				D57818D91CFC3107002E5F24 /* UIView+DGSlimeBoom.m in Sources */,
+				D57818DC1CFC3624002E5F24 /* UIImage+DGSlimeBoom.m in Sources */,
 				D5B31A481CFACA3000E2F5E7 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -504,6 +516,7 @@
 				D5B31A5C1CFACA3000E2F5E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5B31A741CFB30B000E2F5E7 /* Build configuration list for PBXNativeTarget "DGSlimeViewTests" */ = {
 			isa = XCConfigurationList;
@@ -512,6 +525,7 @@
 				D5B31A761CFB30B000E2F5E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D5B31A821CFB383100E2F5E7 /* Build configuration list for PBXNativeTarget "DGSlimeViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +534,7 @@
 				D5B31A841CFB383100E2F5E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

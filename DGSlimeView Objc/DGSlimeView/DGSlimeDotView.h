@@ -10,4 +10,6 @@
 
 @interface DGSlimeDotView : UIView
 
+- (void) boom: (CGPoint) point ;
+
 @end
