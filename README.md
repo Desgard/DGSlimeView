@@ -54,6 +54,8 @@
 
 先对View进行例子分割，将各个粒子在view的layer上进行绘制，用数组保存每个粒子的layer。
 
+![img](/source/source2.jpeg)
+
 ```Objective-C
 #pragma mark - 进入动画
 - (void) boom: (CGPoint) point {

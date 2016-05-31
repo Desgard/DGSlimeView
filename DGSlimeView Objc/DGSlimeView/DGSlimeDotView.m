@@ -57,7 +57,7 @@
         }
     }
     
-    [self cellAnimation];
+    // [self cellAnimation];
     
 }
 
